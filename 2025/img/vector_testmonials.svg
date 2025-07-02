@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="60px" viewBox="0 0 1440 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>vector_testmonials</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Logos" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="vector_testmonials" fill="#FFFDF4" fill-rule="nonzero">
+            <path d="M0,12.8958206 L48,10.6457548 C96,8.47980373 192,3.85350039 288,1.68754929 C384,-0.562516429 480,-0.562516429 576,1.68754929 C672,3.85350039 768,8.47980373 864,15.1458863 C960,21.9381407 1056,30.7701744 1152,30.8332603 C1248,30.7701744 1344,21.9381407 1392,17.3749233 L1440,12.8958206 L1440,60 L1392,60 C1344,60 1248,60 1152,60 C1056,60 960,60 864,60 C768,60 672,60 576,60 C480,60 384,60 288,60 C192,60 96,60 48,60 L0,60 L0,12.8958206 Z" id="Path"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,70 @@
+/* # Footer Styles
+================================================== */
+
+
+section.footer::before {
+  content: "";
+  position: absolute;
+  top: -32px;
+  height: 32px;
+  width: 100%;
+  background: url(../img/vector_footer.svg);
+}
+
+section.footer {
+  position:relative;
+  background: $primary-70;
+  color: white;
+  height: 100%;
+
+  .container {
+    text-align: center;
+    padding: $unit*6 0;
+    margin-bottom: 0;
+
+    p {
+      color: white;
+      font-size: $unit * 4;
+      text-align: center;
+    }
+    a {
+      color: white;
+      font-weight: $semibold;
+      text-decoration: none;
+      &:hover {
+        border-bottom: none;
+      }
+    }
+    .site_links, .social_links {
+      margin-bottom: $unit*6;
+    }
+    .site_links {
+      margin-top: 16px;
+
+      a {
+      margin: 0 8px;
+
+        @media screen and (max-width: 480px) {
+          display: block;
+          margin: 16px 0;
+        }
+      }
+    }
+    .social_links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      .footerlink {
+        margin: $unit*4 $unit*4 0 $unit*4;
+
+        @media screen and (max-width: 480px) {
+          margin: $unit*4 $unit*3 0 $unit*3;
+        }
+        
+      }
+    }
+    
+  }
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="60px" viewBox="0 0 1440 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>vector_footer</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-Copy" fill="#203D55" fill-rule="nonzero">
+            <g id="vector_footer">
+                <path d="M0,0 L80,2.91820104 C160,3.9977465 320,24.8381618 480,26.9214952 C640,29.0048285 800,30.8987679 960,30.9555861 C1120,30.8987679 1143.38415,14.005239 1225.24417,7.66615468 C1279.81751,3.44009846 1351.40279,0.884713563 1440,0 C1440,1.57805519 1440,7.19823526 1440,16.8605402 C1440,26.5228452 1440,40.9026651 1440,60 L1360,60 C1280,60 1120,60 960,60 C800,60 640,60 480,60 C320,60 160,60 80,60 L0,60 L0,0 Z" id="Path"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,59 @@
+
+/* # Imports
+================================================== */
+
+// Libraries
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css');
+
+// Global Variable and compnents
+@import 'variables';
+@import 'global';
+@import 'header';
+@import 'footer';
+
+// PAGES
+@import 'home';
+@import 'myprocess';
+@import 'about';
+@import 'contact';
+@import 'thanks';
+
+
+
+// Tablet
+@media screen and (min-width: 600px) {
+}
+
+// Desktop
+@media screen and (min-width: 1000px) {
+ 
+}
+
+
+
+@keyframes bouncey {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes swipey {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+      
+
+

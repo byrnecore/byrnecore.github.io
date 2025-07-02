@@ -1,0 +1,73 @@
+/* # Global Variables
+================================================== */
+$unit: 4px;
+$max-width: 1024px;
+$desktop-width: 1280px;
+$tablet-width: 768px;
+$mobile-tablet: 575px;
+$mobile-width: 480px;
+$shadow: 0 6px 12px -2px rgba(50,50,93,.25), 0 3px 7px -3px rgba(0,0,0,.3);
+
+/* # Font settings
+================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&display=swap');
+
+$family: -apple-system, BlinkMacSystemFont,'Inter', sans-serif;
+
+$light: 500;
+$normal: 600;
+$semibold: 700;
+
+
+
+/* # Color Variables
+================================================== */
+
+// Primary Colours
+$primary-10: #EFF8FE;
+$primary-20: #ABD4F5;
+$primary-30: #63A2D8;
+$primary-40: #3183C8;
+$primary-50: #2368A2;
+$primary-60: #1A4971;
+$primary-70: #203D55;
+
+// Neutral Scale
+$neutral-10: #F8F9FA;
+$neutral-20: #E1E7EC;
+$neutral-30: #CFD6DE;
+$neutral-40: #B8C4CF;
+$neutral-50: #8895A7;
+$neutral-60: #5F6C7A;
+$neutral-70: #212A34;
+
+// Neutral Colours 
+$Light-Gray:  #F5F7FA; //#E6E9ED
+// $Medium-Gray: #AAB2BD; //#CCD1D9
+$Dark-Gray:   #434A54; //#656D78
+
+
+
+// Accent Colours 
+
+
+// Social Media Colours 
+$behance:     #053eff;     
+$dribbble:    #ea4c89;
+$linkedin:    #007bb5;
+$github:      #4078c0;
+$medium:      #02b875;
+$instagram:   #c32aa3;
+$foursquare:  #FA4778;
+$spotify:     #1ed760;
+$twitter:     #1da1f2;
+$pinterest:   #bd081c;
+$current-role:   #E41421;
+
+
+// Hamburger
+
+
+$hamburger-layer-color         : $primary-70;
+

@@ -1,0 +1,9 @@
+section.thanks {
+  position: relative;
+  height: 100vh;
+  height: -webkit-calc(100vh - 132px);
+  height:    -moz-calc(100vh - 132px);
+  height:         calc(100vh - 132px);
+  // text-align: center;
+
+}

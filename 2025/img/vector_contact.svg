@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="60px" viewBox="0 0 1440 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>vector_contact</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-Copy-5" fill="#FBE8E8" fill-rule="nonzero">
+            <g id="vector_contact" transform="translate(0.000000, -1.000000)">
+                <path d="M0,27.6666667 L48,25.4375 C96,23.2916667 192,18.7083333 288,24.3333333 C384,29.9583333 480,45.375 576,45.4375 C672,45.375 768,3.2916666 864,1 C960,-1.2916667 1056,43.2916667 1152,41 C1248,38.7083334 1329.51185,37.3124099 1361.41074,34.156205 C1382.67667,32.0520683 1408.87309,30 1440,28 L1440,61 L1392,61 C1344,61 1248,61 1152,61 C1056,61 960,61 864,61 C768,61 672,61 576,61 C480,61 384,61 288,61 C192,61 96,61 48,61 L0,61 L0,27.6666667 Z" id="Path"></path>
+            </g>
+        </g>
+    </g>
+</svg>
