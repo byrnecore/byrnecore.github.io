@@ -70,62 +70,6 @@ select {
   }
 }
 
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 100;
-  font-display: auto;
-  src: url("Inter-Thin.woff2?v=3.19") format("woff2"), url("Inter-Thin.woff?v=3.19") format("woff");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-style: italic;
-  font-weight: 100;
-  font-display: auto;
-  src: url("Inter-ThinItalic.woff2?v=3.19") format("woff2"), url("Inter-ThinItalic.woff?v=3.19") format("woff");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 600;
-  font-display: auto;
-  src: url("/fonts/Inter-SemiBold.woff2?v=3.19") format("woff2"), url("/fonts/Inter-SemiBold.woff?v=3.19") format("woff");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-style: italic;
-  font-weight: 600;
-  font-display: auto;
-  src: url("/fonts/Inter-SemiBoldItalic.woff2?v=3.19") format("woff2"), url("/fonts/Inter-SemiBoldItalic.woff?v=3.19") format("woff");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: Bold;
-  font-display: auto;
-  src: url("/fonts/Inter-SemiBold.woff2?v=3.19") format("woff2"), url("/fonts/Inter-SemiBold.woff?v=3.19") format("woff");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-style: italic;
-  font-weight: Bold;
-  font-display: auto;
-  src: url("/fonts/Inter-SemiBoldItalic.woff2?v=3.19") format("woff2"), url("/fonts/Inter-SemiBoldItalic.woff?v=3.19") format("woff");
-}
-
-@font-face {
-  font-family: "Inter V";
-  font-weight: 100 900;
-  font-display: auto;
-  font-style: oblique 0deg 10deg;
-  src: url("/fonts/Inter.var.woff2?v=3.19") format("woff2");
-}
-
 /* Breakpoints
 'sm': '640px'
 'md': '768px'
@@ -145,8 +89,8 @@ select {
     BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif,
     "Apple Color Emoji";
   /* Colors */
-  --foreground-rgb: 59, 59, 59;
-  --background-rgb: 252, 252, 252;
+  --foreground-rgb: 1, 71, 55;
+  --background-rgb: 243, 250, 247;
   /* Layout */
   --wrap-max-width: 690px;
 }
@@ -161,8 +105,8 @@ select {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 206, 206, 206;
-    --background-rgb: 25, 25, 25;
+    --foreground-rgb: 1, 71, 55;
+    --background-rgb: 243, 250, 247;
   }
 }
 
