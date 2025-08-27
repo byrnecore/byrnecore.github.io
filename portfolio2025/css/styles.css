@@ -365,3 +365,23 @@ h2.split-title {
   .identity { gap: 12px; }
   .identity__avatar { width: 64px; height: 64px; }
 }
+
+
+/* Email copy action */
+
+.emailAction {
+  cursor: pointer;
+  position: relative;
+}
+.emailAction:hover::after {
+  content: "Copy";
+  font-size: 0.85rem;
+  color: var(--muted, #666);
+  margin-left: 8px;
+  opacity: 0.6;
+}
+.emailAction.copied::after {
+  content: "Copied ✓";
+  color: var(--link, #0b57d0);
+  opacity: 1;
+}
