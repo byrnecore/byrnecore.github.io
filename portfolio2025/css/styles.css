@@ -266,7 +266,7 @@ div.highlight {
 }
 
 /* Case study (same layout on all viewports) */
-.case-split {
+.case-split, .case-leadin {
   display: block;               /* single column everywhere */
   margin-block: 2rem;
   margin-bottom: 6rem;
@@ -281,7 +281,7 @@ div.highlight {
 .case-split__media img {
   width: 100%;
   height: auto;
-  aspect-ratio: 16 / 9;         /* consistent look across images */
+  aspect-ratio: 1 / 1;         /* consistent look across images */
   object-fit: cover;
   border-radius: 8px;
   display: block;
