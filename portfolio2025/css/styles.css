@@ -367,21 +367,31 @@ h2.split-title {
 }
 
 
-/* Email copy action */
-
+/* Look/feel like your links */
 .emailAction {
+  appearance: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
   cursor: pointer;
+  text-decoration: underline;
+}
+.emailAction:hover { text-decoration: underline; }
+
+/* No-jump label swap */
+.emailAction__labels {
   position: relative;
+  display: inline-block;
+  min-width: 6ch;                /* wide enough for 'copied' */
 }
-.emailAction:hover::after {
-  content: "Copy";
-  font-size: 0.85rem;
-  color: var(--muted, #666);
-  margin-left: 8px;
-  opacity: 0.6;
+.label {
+  position: absolute;
+  inset: 0 auto auto 0;
+  opacity: 0;
+  transition: opacity .18s ease;
+  text-decoration: underline;
 }
-.emailAction.copied::after {
-  content: "Copied ✓";
-  color: var(--link, #0b57d0);
-  opacity: 1;
-}
+.label--default { opacity: 1; }
+.emailAction.copied .label--default { opacity: 0; }
+.emailAction.copied .label--copied  { opacity: 1; }

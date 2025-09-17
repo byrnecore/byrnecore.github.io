@@ -38,22 +38,7 @@
   <script type="application/ld+json">
   { "@context": "https://schema.org", "@type": "WebSite", "description": "AShaun - a strategic and data driven product designer.", "headline": "Home", "name": "Shaun Byrne", "url": "https://shaunbyrne.com/" }
   </script>
-  <!-- email copy action -->
-  <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const el = document.querySelector(".emailAction");
-    if (!el) return;
-
-    el.addEventListener("click", () => {
-      const email = el.dataset.email;
-      navigator.clipboard.writeText(email).then(() => {
-        el.classList.add("copied");
-        setTimeout(() => el.classList.remove("copied"), 2000);
-      });
-    });
-  });
-  </script>
-  <!-- END email copy action -->
+  <script src="js/script.js" defer></script>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -104,7 +89,12 @@
   </main>
   <footer>
     <p>
-      <a href="https://x.com/byrnecore">Twitter/X</a> | <a href="https://www.linkedin.com/in/byrneshaun/">LinkedIn</a> | <a href="https://dribbble.com/byrnecore">Dribbble</a> | <a href="https://www.instagram.com/byrnecore">Instagram</a> | <span class="emailAction" data-email="you@example.com">hello@shaunbyrne.com</span>
+      <a href="https://x.com/byrnecore">Twitter/X</a> | <a href="https://www.linkedin.com/in/byrneshaun/">LinkedIn</a> | <a href="https://dribbble.com/byrnecore">Dribbble</a> | <a href="https://www.instagram.com/byrnecore">Instagram</a> | <button class="emailAction" data-email="hello@shaunbyrne.com">
+        <span class="emailAction__labels" aria-live="polite">
+          <span class="label label--default" aria-hidden="true">email</span>
+          <span class="label label--copied" aria-hidden="true">copied!</span>
+        </span>
+      </button>
     </p>
   </footer>
 </body>
