@@ -367,30 +367,40 @@ h2.split-title {
 }
 
 
-/* Look/feel like your links */
+/* Looks like a normal link */
 .emailAction {
   appearance: none;
   background: none;
   border: 0;
   padding: 0;
+  margin: 0;
   font: inherit;
+  color: rgb(var(--foreground-rgb));
   cursor: pointer;
-  text-decoration: underline;
+  text-decoration: none;
+  display: inline-block;        /* take on line-height like links */
+  line-height: inherit;
+  vertical-align: baseline;     /* align with surrounding text */
 }
 .emailAction:hover { text-decoration: underline; }
 
-/* No-jump label swap */
+/* Reserve width and keep baseline by using a 1-cell grid */
 .emailAction__labels {
-  position: relative;
-  display: inline-block;
-  min-width: 6ch;                /* wide enough for 'copied' */
+  display: inline-grid;         
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  min-width: 6ch;               /* enough for 'copied' */  
+  justify-items: start;           /* <- left align */
+  align-items: baseline;          /* <- follow text baseline */
+  text-decoration: underline;
 }
+
+/* Both labels sit in the same grid cell; we just fade them */
 .label {
-  position: absolute;
-  inset: 0 auto auto 0;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
   opacity: 0;
   transition: opacity .18s ease;
-  text-decoration: underline;
 }
 .label--default { opacity: 1; }
 .emailAction.copied .label--default { opacity: 0; }
