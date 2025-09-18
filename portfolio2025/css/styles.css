@@ -333,6 +333,46 @@ h2.split-title { margin: 2rem 0 .25rem; }
   color: var(--muted, #666);
 }
 
+/* Secondary Avatar lock-up */
+
+.site-header {
+  padding: 0 0 1rem 0;
+  border-bottom: 1px solid var(--border, #e6e6e6);
+  margin-bottom: 2rem;
+}
+
+.identity {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.identity__link {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  font-weight: 600;
+  color: var(--foreground, #014737);
+  text-decoration: none;
+}
+
+.identity__link:hover {
+  text-decoration: underline;
+}
+
+.identity__avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border, #e6e6e6);
+}
+
+.identity__name {
+  font-size: 1.1rem;
+}
+
+
 /* Optional chips */
 .identity__chips {
   display: flex;
