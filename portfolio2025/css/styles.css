@@ -314,7 +314,7 @@ h2.split-title { margin: 2rem 0 .25rem; }
   margin: 14px 0 10px;
 }
 
-.identity__avatar {
+.identity__avatar_primary {
   width: 80px;
   height: 80px;
   border-radius: 50%;
