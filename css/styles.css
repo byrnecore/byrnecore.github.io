@@ -49,6 +49,65 @@ picture {
   display: block;
 }
 
+.about-hero {
+  margin: 1rem auto 3rem;
+  max-height: 600px;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.about-hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+body.js-enabled img[data-fade-in] {
+  opacity: 0;
+  transition: opacity 320ms ease-in-out;
+}
+
+body.js-enabled img[data-fade-in].is-visible {
+  opacity: 1;
+}
+
+body.js-enabled [data-fade-container] {
+  position: relative;
+}
+
+body.js-enabled [data-fade-container]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(90deg,
+      rgba(var(--foreground-rgb), 0.07) 25%,
+      rgba(var(--foreground-rgb), 0.12) 37%,
+      rgba(var(--foreground-rgb), 0.07) 63%);
+  background-size: 400% 100%;
+  animation: skeleton-shimmer 1.6s ease-in-out infinite;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: none;
+  transition: opacity 200ms ease, visibility 0s linear 200ms;
+}
+
+body.js-enabled [data-fade-container].is-loaded::before {
+  opacity: 0;
+  visibility: hidden;
+  animation-play-state: paused;
+}
+
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
 /* Inherit fonts for inputs and buttons */
 input,
 button,
@@ -274,8 +333,9 @@ h2.split-title { margin: 2rem 0 .25rem; }
   padding-bottom: 2px;
 }
 
-.case-split__media img { transition: transform .45s ease; }
-.case-split__media:hover img { transform: scale(1.03); }
+.case-split__media img {
+  transition: opacity 320ms ease-in-out;
+}
 
 /* Avatar lock-up */
 .identity {
