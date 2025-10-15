@@ -63,9 +63,10 @@ select {
   *,
   *::before,
   *::after {
-    animation-duration: 0.01ms !important;
+    animation-duration: 0s !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    animation-play-state: paused !important;
+    transition-duration: 0s !important;
     scroll-behavior: auto !important;
   }
 }
@@ -78,7 +79,7 @@ select {
 :root {
   /* Text sizes */
   --base-text-size: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem);
-  --h1-text-size: clamp(1.6rem, 0.9565rem + 0.2174vw, 1.125rem);
+  --h1-text-size: clamp(1.125rem, 0.9565rem + 0.2174vw, 1.6rem);
   --mono-text-size: 1rem;
   --base-line-height: 1.5;
   /* Spacing */
@@ -101,13 +102,6 @@ select {
     --font-family: "Inter V", ui-sans-serif, system-ui, -system-ui, -apple-system,
       BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif,
       "Apple Color Emoji";
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 1, 71, 55;
-    --background-rgb: 243, 250, 247;
   }
 }
 
@@ -190,6 +184,10 @@ ol {
   padding-left: 1.5rem;
 }
 
+.wrap ul + p {
+  margin-top: 1.5rem;
+}
+
 blockquote {
   padding: 0 var(--space-s-m);
   font-variation-settings: "slnt"10;
@@ -222,13 +220,6 @@ div.highlight {
   margin: 0 auto;
 }
 
-.global-header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
-
 .home-link {
   margin-bottom: 2rem;
 }
@@ -243,31 +234,6 @@ div.highlight {
 
 .metadata {
   color: rgba(var(--foreground-rgb), 0.5);
-}
-
-.footnotes {
-  margin-top: 2rem;
-  color: rgba(var(--foreground-rgb), 0.75);
-}
-
-.reversefootnote {
-  color: rgba(var(--foreground-rgb), 0.75);
-  text-decoration: none;
-}
-
-.tags {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.tag {
-  color: rgba(var(--foreground-rgb), 0.5);
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }
 
 /* Case study (same layout on all viewports) */
@@ -330,7 +296,7 @@ h2.split-title { margin: 2rem 0 .25rem; }
 .identity__title {
   margin: 0 0 2px;
   line-height: 1.1;
-  font-size: clamp(1.6rem, 3.5vw, 1.5rem);
+  font-size: clamp(1.25rem, 3.5vw, 1.6rem);
 }
 
 .identity__subtitle {
