@@ -51,22 +51,29 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!fadeImages.length) return;
 
   fadeImages.forEach((img) => {
-    const reveal = () => {
+    const container = img.closest('[data-fade-container]');
+    const markLoaded = () => {
       img.classList.add('is-visible');
+      if (container) {
+        container.classList.add('is-loaded');
+      }
     };
 
     if (img.complete && img.naturalWidth > 0) {
       // Already loaded (cached)
-      requestAnimationFrame(reveal);
+      requestAnimationFrame(markLoaded);
       return;
     }
 
     img.addEventListener('load', () => {
-      requestAnimationFrame(reveal);
+      requestAnimationFrame(markLoaded);
     }, { once: true });
 
     img.addEventListener('error', () => {
       img.classList.add('is-visible');
+      if (container) {
+        container.classList.add('is-loaded');
+      }
     }, { once: true });
   });
 });
