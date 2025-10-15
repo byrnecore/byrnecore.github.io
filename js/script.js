@@ -1,5 +1,6 @@
 // Email copy: supports one or many .emailAction elements
 document.addEventListener('DOMContentLoaded', () => {
+  document.body?.classList.add('js-enabled');
   const els = document.querySelectorAll('.emailAction');
   if (!els.length) return;
 
@@ -42,5 +43,30 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.click();
       }
     });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const fadeImages = document.querySelectorAll('img[data-fade-in]');
+  if (!fadeImages.length) return;
+
+  fadeImages.forEach((img) => {
+    const reveal = () => {
+      img.classList.add('is-visible');
+    };
+
+    if (img.complete && img.naturalWidth > 0) {
+      // Already loaded (cached)
+      requestAnimationFrame(reveal);
+      return;
+    }
+
+    img.addEventListener('load', () => {
+      requestAnimationFrame(reveal);
+    }, { once: true });
+
+    img.addEventListener('error', () => {
+      img.classList.add('is-visible');
+    }, { once: true });
   });
 });

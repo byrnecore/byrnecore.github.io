@@ -49,6 +49,15 @@ picture {
   display: block;
 }
 
+body.js-enabled img[data-fade-in] {
+  opacity: 0;
+  transition: opacity 320ms ease-in-out;
+}
+
+body.js-enabled img[data-fade-in].is-visible {
+  opacity: 1;
+}
+
 /* Inherit fonts for inputs and buttons */
 input,
 button,
