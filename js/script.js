@@ -47,33 +47,52 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  const fadeImages = document.querySelectorAll('img[data-fade-in]');
-  if (!fadeImages.length) return;
+  const fadeTargets = document.querySelectorAll('[data-fade-in]');
+  if (!fadeTargets.length) return;
 
-  fadeImages.forEach((img) => {
-    const container = img.closest('[data-fade-container]');
+  fadeTargets.forEach((el) => {
+    const container = el.closest('[data-fade-container]');
     const markLoaded = () => {
-      img.classList.add('is-visible');
+      el.classList.add('is-visible');
       if (container) {
         container.classList.add('is-loaded');
       }
     };
 
-    if (img.complete && img.naturalWidth > 0) {
-      // Already loaded (cached)
-      requestAnimationFrame(markLoaded);
+    if (el instanceof HTMLImageElement) {
+      if (el.complete && el.naturalWidth > 0) {
+        // Already loaded (cached)
+        requestAnimationFrame(markLoaded);
+        return;
+      }
+
+      el.addEventListener('load', () => {
+        requestAnimationFrame(markLoaded);
+      }, { once: true });
+
+      el.addEventListener('error', () => {
+        requestAnimationFrame(markLoaded);
+      }, { once: true });
       return;
     }
 
-    img.addEventListener('load', () => {
-      requestAnimationFrame(markLoaded);
-    }, { once: true });
+    if (el instanceof HTMLVideoElement) {
+      const markWhenReady = () => {
+        requestAnimationFrame(markLoaded);
+      };
 
-    img.addEventListener('error', () => {
-      img.classList.add('is-visible');
-      if (container) {
-        container.classList.add('is-loaded');
+      if (el.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) {
+        requestAnimationFrame(markLoaded);
+        return;
       }
-    }, { once: true });
+
+      el.addEventListener('loadeddata', markWhenReady, { once: true });
+      el.addEventListener('canplay', markWhenReady, { once: true });
+      el.addEventListener('error', markWhenReady, { once: true });
+      return;
+    }
+
+    // Fallback: immediately mark non-image/video elements
+    requestAnimationFrame(markLoaded);
   });
 });
