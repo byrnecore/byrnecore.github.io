@@ -355,8 +355,6 @@ body.js-enabled .case-split__media--video::before {
   background: #f6d5e0;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 6px 12px -2px rgba(50, 50, 93, 0.25),
-    0 3px 7px -3px rgba(0, 0, 0, 0.3);
 }
 
 h2.split-title { margin: 2rem 0 .25rem; }
