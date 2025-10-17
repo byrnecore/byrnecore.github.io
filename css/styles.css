@@ -317,6 +317,15 @@ div.highlight {
   display: block;
 }
 
+.case-split__media video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
 h2.split-title { margin: 2rem 0 .25rem; }
 
 .muted {
