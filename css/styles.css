@@ -307,6 +307,18 @@ div.highlight {
   border-radius: 8px;
 }
 
+.case-split__media--video {
+  overflow: visible;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+body.js-enabled .case-split__media--video::before {
+  content: none;
+}
+
 /* Keep a consistent crop; remove if you want natural height */
 .case-split__media img {
   width: 100%;
@@ -315,6 +327,36 @@ div.highlight {
   object-fit: cover;
   border-radius: 8px;
   display: block;
+}
+
+.case-split__media video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background-color: transparent;
+  border-radius: 8px;
+  display: block;
+}
+
+.case-split__media--video video {
+  height: 100%;
+  aspect-ratio: auto;
+  border-radius: 12px;
+}
+
+.case-split__video-frame {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1.5rem, 1rem + 2vw, 2.5rem);
+  background: #f6d5e0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px -2px rgba(50, 50, 93, 0.25),
+    0 3px 7px -3px rgba(0, 0, 0, 0.3);
 }
 
 h2.split-title { margin: 2rem 0 .25rem; }
